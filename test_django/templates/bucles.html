@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>Plantilla ejemplo bucles</h1>
+        <p>Alumno: {{nombre.upper}}</p>
+        <p>
+            Imprimimos variable:
+            {{temas}}
+        </p>
+        <p>
+            <strong>Recorriendo los temas con un bucle for:</strong>
+            <ul>
+            {% for tema in temas%}
+                {% if tema == "tema1" %}
+                    <strong><li>{{tema}} ( {{tema|upper|first}} )</li></strong>
+                {% else %}
+                    <li>{{tema}}</li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </p>
+    </body>
+</html>
